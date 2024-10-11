@@ -7,21 +7,21 @@ public class Movimiento {
     private String detalle;
     
     public Movimiento(double importe, Signo signo){
-        this.importe = 0.0;
-        this.signo = null;
-        
+        this.importe = importe;
+        this.signo = signo;
+        this.detalle = (signo == Signo.D)?"Ingreso":"Reintegro";
     }
     
     public double getImporte() {
-        return 0.0;
+        return importe;
     }
 
     public Signo getSigno() {
-        return null;
+        return signo;
     }
 
     public String getDetalle() {
-        return null;
+        return detalle;
     }
 
 }

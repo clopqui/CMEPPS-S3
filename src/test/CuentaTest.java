@@ -43,13 +43,15 @@ class CuentaTest {
     
     @Test
     public void testRetirar() {
+    	ctaPruebas.ingresar(3500);
         ctaPruebas.retirar(3000);
-        assertEquals(-3000,ctaPruebas.getSaldo());
+        assertEquals(500,ctaPruebas.getSaldo());
     }
     
     @Test
     public void testRetirarSinDinero() {
         ctaPruebas.retirar(3000);
+        // Se espera error ya que no se puede retirar dinero negativo, espera 0.0.
         assertEquals(-3000,ctaPruebas.getSaldo());
     }
 
