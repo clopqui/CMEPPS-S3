@@ -6,6 +6,7 @@ import java.util.List;
 public class Cuenta {
 	private String numero;
     private String titular;
+    
     List <Movimiento> mMovimientos = new ArrayList<>();
     private double saldo;
     
